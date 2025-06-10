@@ -2,8 +2,8 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>MR GUSTO</title>
-  <script src="pdfjs/pdf.js"></script>
+  <title>عرض المنيو</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
   <style>
     body, html {
       margin: 0;
@@ -25,7 +25,7 @@
 <body>
   <div id="pdf-container"></div>
   <script>
-    pdfjsLib.GlobalWorkerOptions.workerSrc = 'pdfjs/pdf.worker.js';
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js';
 
     const loadingTask = pdfjsLib.getDocument('menu.pdf');
     loadingTask.promise.then(pdf => {
