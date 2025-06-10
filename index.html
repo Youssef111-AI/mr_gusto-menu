@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>MR GUSTO</title>
-  <script src="pdf.js"></script>
+  <script src="pdfjs/pdf.js"></script>
   <style>
     body, html {
       margin: 0;
@@ -25,9 +25,9 @@
 <body>
   <div id="pdf-container"></div>
   <script>
-    pdfjsLib.GlobalWorkerOptions.workerSrc = 'pdf.worker.js';
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'pdfjs/pdf.worker.js';
 
-    const loadingTask = pdfjsLib.getDocument('MR Gusto menu.pdf');
+    const loadingTask = pdfjsLib.getDocument('menu.pdf');
     loadingTask.promise.then(pdf => {
       for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
         pdf.getPage(pageNum).then(page => {
