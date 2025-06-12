@@ -2,81 +2,84 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>منيو Mr. Gusto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f5f2ea;
-      color: #333;
+      padding: 0;
+      background-color: #f7f6f2;
+      font-family: 'Cairo', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-    .header {
-      text-align: center;
-      padding: 20px;
-      background-color: #e2daca;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-    .header h1 {
-      margin: 0;
-      font-size: 28px;
-      color: #4b3f2d;
-    }
-    .container {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 10px;
-    }
-    .menu-image {
+
+    header {
+      background-color: #a83232;
       width: 100%;
-      height: auto;
-      border-radius: 16px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-      margin-bottom: 30px;
+      padding: 20px 0;
+      text-align: center;
+      color: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    .gallery {
+      max-width: 1000px;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
       transition: transform 0.3s ease;
     }
-    .menu-image:hover {
-      transform: scale(1.01);
+
+    .gallery img:hover {
+      transform: scale(1.02);
     }
-    footer {
-      text-align: center;
-      padding: 10px;
-      color: #777;
-      font-size: 14px;
+
+    @media (min-width: 600px) {
+      .gallery {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (min-width: 900px) {
+      .gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="header">
+  <header>
     <h1>منيو Mr. Gusto</h1>
-  </div>
+  </header>
 
-  <div class="container">
-    <!-- صور المنيو -->
-    <img src="menu(1)_1.webp" alt="منيو 1" class="menu-image">
-    <img src="menu(1)_2.webp" alt="منيو 2" class="menu-image">
-    <img src="menu(1)_3.webp" alt="منيو 3" class="menu-image">
-    <img src="menu(1)_4.webp" alt="منيو 4" class="menu-image">
-    <img src="menu(1)_5.webp" alt="منيو 5" class="menu-image">
-    <img src="menu(1)_6.webp" alt="منيو 6" class="menu-image">
-    <img src="menu(1)_7.webp" alt="منيو 7" class="menu-image">
-    <img src="menu(1)_8.webp" alt="منيو 8" class="menu-image">
-    <img src="menu(1)_9.webp" alt="منيو 9" class="menu-image">
-    <img src="menu(1)_10.webp" alt="منيو 10" class="menu-image">
-    <img src="menu(1)_11.webp" alt="منيو 11" class="menu-image">
-    <img src="menu(1)_12.webp" alt="منيو 12" class="menu-image">
-    <img src="menu(1)_13.webp" alt="منيو 13" class="menu-image">
-    <img src="menu(1)_14.webp" alt="منيو 14" class="menu-image">
-    <img src="menu(1)_15.webp" alt="منيو 15" class="menu-image">
-    <img src="menu(1)_16.webp" alt="منيو 16" class="menu-image">
-    <img src="menu(1)_17.webp" alt="منيو 17" class="menu-image">
-    <img src="menu(1)_18.webp" alt="منيو 18" class="menu-image">
-  </div>
+  <div class="gallery" id="menu-gallery"></div>
 
-  <footer>
-    &copy; 2025 Mr. Gusto. جميع الحقوق محفوظة.
-  </footer>
+  <script>
+    const totalImages = 18;
+    const gallery = document.getElementById('menu-gallery');
+    for (let i = 1; i <= totalImages; i++) {
+      const img = document.createElement('img');
+      img.src = `menu(${i})_1.webp`;
+      img.alt = `منيو ${i}`;
+      gallery.appendChild(img);
+    }
+  </script>
 
 </body>
 </html>
