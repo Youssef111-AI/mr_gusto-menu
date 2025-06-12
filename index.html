@@ -75,7 +75,7 @@
     const gallery = document.getElementById('menu-gallery');
     for (let i = 1; i <= totalImages; i++) {
       const img = document.createElement('img');
-      img.src = `menu(${i})_1.webp`;
+      img.src = `menu(1)_${i}.webp`; // الرقم المتغير في النهاية فقط
       img.alt = `منيو ${i}`;
       gallery.appendChild(img);
     }
