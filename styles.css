@@ -6,51 +6,38 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  color: white;
-}
-
-.section {
-  padding: 20px 10px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.section h2 {
-  font-size: 1.4rem;
-  margin-bottom: 10px;
-  border-bottom: 2px solid rgba(255,255,255,0.3);
-  padding-bottom: 5px;
+  display: flex;
+  justify-content: center;
 }
 
 .gallery {
+  width: 100%;
+  max-width: 1000px;
+  padding: 10px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
 }
 
-/* صور تظهر بانيميشن بسيط */
 .gallery img {
   width: 100%;
-  height: auto;
+  border-radius: 12px;
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-/* لما الصورة تظهر */
 .gallery img.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* موبايل */
 @media (min-width: 600px) {
   .gallery {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-/* تابلت أو أكبر */
 @media (min-width: 900px) {
   .gallery {
     grid-template-columns: 1fr 1fr 1fr;
