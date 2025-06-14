@@ -1,55 +1,58 @@
-/* styles.css */
-
 body {
   margin: 0;
   padding: 0;
-  background-color: #f7f6f2;
   font-family: 'Cairo', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-image: url('https://res.cloudinary.com/dwhkjr77b/image/upload/v1749931587/Background_lcttlj.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  color: white;
 }
 
-header {
-  display: none; /* إخفاء البار العلوي حسب طلبك */
+.section {
+  padding: 20px 10px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  border-bottom: 2px solid rgba(255,255,255,0.3);
+  padding-bottom: 5px;
 }
 
 .gallery {
-  max-width: 1000px;
-  padding: 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-  justify-items: center;
-  box-sizing: border-box;
-  background-color: rgba(255, 255, 255, 0.85);
-  border-radius: 16px;
-  margin-top: 40px;
+  grid-template-columns: 1fr;
+  gap: 10px;
 }
 
+/* صور تظهر بانيميشن بسيط */
 .gallery img {
   width: 100%;
-  max-width: 250px;
   height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-  transition: transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.gallery img:hover {
-  transform: scale(1.02);
+/* لما الصورة تظهر */
+.gallery img.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-footer {
-  margin: 30px 0;
-  color: #555;
-  font-size: 14px;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.7);
-  padding: 10px 20px;
-  border-radius: 8px;
+/* موبايل */
+@media (min-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* تابلت أو أكبر */
+@media (min-width: 900px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
