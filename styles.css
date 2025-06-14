@@ -32,6 +32,7 @@ header h1 {
 
 .gallery img {
   width: 100%;
+  height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
   transition: transform 0.3s ease;
