@@ -1,35 +1,30 @@
-// روابط الصور لكل قسم
-const sandwiches = [
-  "https://res.cloudinary.com/dwhkjr77b/image/upload/q_auto:good/menu_1__1_f3uwre.webp",
-  "https://res.cloudinary.com/dwhkjr77b/image/upload/q_auto:good/menu_1__2_ipjf3f.webp"
+const imageLinks = [
+  "https://res.cloudinary.com/dwhkjr77b/image/upload/q_auto:eco/menu_1__1_f3uwre.webp",
+  "https://res.cloudinary.com/dwhkjr77b/image/upload/q_auto:eco/menu_1__2_ipjf3f.webp",
+  "https://res.cloudinary.com/dwhkjr77b/image/upload/q_auto:eco/menu_1__3_igyn6e.webp",
+  "https://res.cloudinary.com/dwhkjr77b/image/upload/q_auto:eco/menu_1__4_s3jjfr.webp",
+  "https://res.cloudinary.com/dwhkjr77b/image/upload/q_auto:eco/menu_1__5_i2960o.webp",
+  "https://res.cloudinary.com/dwhkjr77b/image/upload/q_auto:eco/menu_1__6_ncfrch.webp",
+  "https://res.cloudinary.com/dwhkjr77b/image/upload/q_auto:eco/menu_1__7_j9ufxr.webp",
+  "https://res.cloudinary.com/dwhkjr77b/image/upload/q_auto:eco/menu_1__8_u4eeoh.webp",
+  "https://res.cloudinary.com/dwhkjr77b/image/upload/q_auto:eco/menu_1__9_e4gfuc.webp",
+  "https://res.cloudinary.com/dwhkjr77b/image/upload/q_auto:eco/menu_1__10_z1g71e.webp",
+  "https://res.cloudinary.com/dwhkjr77b/image/upload/q_auto:eco/menu_1__11_fdygq1.webp",
+  "https://res.cloudinary.com/dwhkjr77b/image/upload/q_auto:eco/menu_1__12_swi6ui.webp",
+  "https://res.cloudinary.com/dwhkjr77b/image/upload/q_auto:eco/menu_1__13_kxgukc.webp",
+  "https://res.cloudinary.com/dwhkjr77b/image/upload/q_auto:eco/menu_1__14_ehtj43.webp",
+  "https://res.cloudinary.com/dwhkjr77b/image/upload/q_auto:eco/menu_1__15_j49ojl.webp",
+  "https://res.cloudinary.com/dwhkjr77b/image/upload/q_auto:eco/menu_1__16_i0rrih.webp",
+  "https://res.cloudinary.com/dwhkjr77b/image/upload/q_auto:eco/menu_1__17_gsworm.webp",
+  "https://res.cloudinary.com/dwhkjr77b/image/upload/q_auto:eco/menu_1__18_tzn50v.webp"
 ];
 
-const drinks = [
-  "https://res.cloudinary.com/dwhkjr77b/image/upload/q_auto:good/menu_1__3_igyn6e.webp",
-  "https://res.cloudinary.com/dwhkjr77b/image/upload/q_auto:good/menu_1__4_s3jjfr.webp"
-];
+const gallery = document.getElementById('menu-gallery');
 
-const meals = [
-  "https://res.cloudinary.com/dwhkjr77b/image/upload/q_auto:good/menu_1__5_i2960o.webp",
-  "https://res.cloudinary.com/dwhkjr77b/image/upload/q_auto:good/menu_1__6_ncfrch.webp",
-  "https://res.cloudinary.com/dwhkjr77b/image/upload/q_auto:good/menu_1__7_j9ufxr.webp",
-  "https://res.cloudinary.com/dwhkjr77b/image/upload/q_auto:good/menu_1__8_u4eeoh.webp"
-];
-
-// دالة إضافة الصور لأي قسم
-function loadImages(imageArray, containerId) {
-  const container = document.getElementById(containerId);
-  imageArray.forEach(src => {
-    const img = document.createElement('img');
-    img.src = src;
-    img.alt = "صورة منيو";
-    container.appendChild(img);
-    // التأخير البسيط للانيميشن
-    setTimeout(() => img.classList.add('visible'), 100);
-  });
-}
-
-// تحميل الصور
-loadImages(sandwiches, "section-sandwiches");
-loadImages(drinks, "section-drinks");
-loadImages(meals, "section-meals");
+imageLinks.forEach(link => {
+  const img = document.createElement('img');
+  img.src = link;
+  img.alt = "صورة منيو";
+  gallery.appendChild(img);
+  setTimeout(() => img.classList.add('visible'), 100);
+});
