@@ -1,107 +1,57 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>منيو Mr. Gusto</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #f7f6f2;
-      font-family: 'Cairo', sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    header {
-      background-color: #a83232;
-      width: 100%;
-      padding: 20px 0;
-      text-align: center;
-      color: white;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 1.8rem;
-    }
-
-    .gallery {
-      max-width: 1000px;
-      padding: 20px;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
-    }
-
-    .gallery img {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-      transition: transform 0.3s ease;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.02);
-    }
-
-    @media (min-width: 600px) {
-      .gallery {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media (min-width: 900px) {
-      .gallery {
-        grid-template-columns: 1fr 1fr 1fr;
-      }
-    }
+    body { margin:0;padding:0;background:#f7f6f2;font-family:'Cairo',sans-serif; text-align:center; }
+    header { background:#a83232;color:white;padding:20px; }
+    header h1 { margin:0;font-size:1.8rem; }
+    .gallery { display:grid; gap:20px; padding:20px; max-width:900px; margin:auto; }
+    @media(min-width:600px){ .gallery { grid-template-columns:1fr 1fr; }}
+    @media(min-width:900px){ .gallery { grid-template-columns:repeat(3,1fr); }}
+    .gallery img { width:100%; border-radius:12px; box-shadow:0 4px 16px rgba(0,0,0,0.12); transition:transform .3s; }
+    .gallery img:hover { transform:scale(1.02); }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>منيو Mr. Gusto</h1>
-  </header>
+<header><h1>منيو Mr. Gusto</h1></header>
+<div class="gallery" id="menu-gallery"></div>
 
-  <div class="gallery" id="menu-gallery"></div>
-
-  <script>
-    const imageLinks = [
-      "https://res.cloudinary.com/dwhkjr77b/image/upload/v1749905068/menu_1__1_f3uwre.webp",
-      "https://res.cloudinary.com/dwhkjr77b/image/upload/v1749905066/menu_1__2_ipjf3f.webp",
-      "https://res.cloudinary.com/dwhkjr77b/image/upload/v1749905075/menu_1__3_igyn6e.webp",
-      "https://res.cloudinary.com/dwhkjr77b/image/upload/v1749905075/menu_1__4_s3jjfr.webp",
-      "https://res.cloudinary.com/dwhkjr77b/image/upload/v1749905075/menu_1__5_i2960o.webp",
-      "https://res.cloudinary.com/dwhkjr77b/image/upload/v1749905079/menu_1__6_ncfrch.webp",
-      "https://res.cloudinary.com/dwhkjr77b/image/upload/v1749905086/menu_1__7_j9ufxr.webp",
-      "https://res.cloudinary.com/dwhkjr77b/image/upload/v1749905086/menu_1__8_u4eeoh.webp",
-      "https://res.cloudinary.com/dwhkjr77b/image/upload/v1749905092/menu_1__9_e4gfuc.webp",
-      "https://res.cloudinary.com/dwhkjr77b/image/upload/v1749905078/menu_1__10_z1g71e.webp",
-      "https://res.cloudinary.com/dwhkjr77b/image/upload/v1749905079/menu_1__11_fdygq1.webp",
-      "https://res.cloudinary.com/dwhkjr77b/image/upload/v1749905086/menu_1__12_swi6ui.webp",
-      "https://res.cloudinary.com/dwhkjr77b/image/upload/v1749905085/menu_1__13_kxgukc.webp",
-      "https://res.cloudinary.com/dwhkjr77b/image/upload/v1749905091/menu_1__14_ehtj43.webp",
-      "https://res.cloudinary.com/dwhkjr77b/image/upload/v1749905092/menu_1__15_j49ojl.webp",
-      "https://res.cloudinary.com/dwhkjr77b/image/upload/v1749905096/menu_1__16_i0rrih.webp",
-      "https://res.cloudinary.com/dwhkjr77b/image/upload/v1749905096/menu_1__17_gsworm.webp",
-      "https://res.cloudinary.com/dwhkjr77b/image/upload/v1749905095/menu_1__18_tzn50v.webp",
-      // ... أكمل باقي الروابط
-    ];
-
-    const gallery = document.getElementById('menu-gallery');
-
-    imageLinks.forEach(link => {
-      const img = document.createElement('img');
-      img.src = link;
-      img.alt = "صورة منيو";
-      gallery.appendChild(img);
-    });
-  </script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const imageLinks = [
+    "https://res.cloudinary.com/dwhkjr77b/image/upload/v1749905068/menu_1__1_f3uwre.webp",
+    "https://res.cloudinary.com/dwhkjr77b/image/upload/v1749905066/menu_1__2_ipjf3f.webp",
+    "https://res.cloudinary.com/dwhkjr77b/image/upload/v1749905075/menu_1__3_igyn6e.webp",
+    "https://res.cloudinary.com/dwhkjr77b/image/upload/v1749905075/menu_1__4_s3jjfr.webp",
+    "https://res.cloudinary.com/dwhkjr77b/image/upload/v1749905075/menu_1__5_i2960o.webp",
+    "https://res.cloudinary.com/dwhkjr77b/image/upload/v1749905079/menu_1__6_ncfrch.webp",
+    "https://res.cloudinary.com/dwhkjr77b/image/upload/v1749905086/menu_1__7_j9ufxr.webp",
+    "https://res.cloudinary.com/dwhkjr77b/image/upload/v1749905086/menu_1__8_u4eeoh.webp",
+    "https://res.cloudinary.com/dwhkjr77b/image/upload/v1749905092/menu_1__9_e4gfuc.webp",
+    "https://res.cloudinary.com/dwhkjr77b/image/upload/v1749905078/menu_1__10_z1g71e.webp",
+    "https://res.cloudinary.com/dwhkjr77b/image/upload/v1749905079/menu_1__11_fdygq1.webp",
+    "https://res.cloudinary.com/dwhkjr77b/image/upload/v1749905086/menu_1__12_swi6ui.webp",
+    "https://res.cloudinary.com/dwhkjr77b/image/upload/v1749905085/menu_1__13_kxgukc.webp",
+    "https://res.cloudinary.com/dwhkjr77b/image/upload/v1749905091/menu_1__14_ehtj43.webp",
+    "https://res.cloudinary.com/dwhkjr77b/image/upload/v1749905092/menu_1__15_j49ojl.webp",
+    "https://res.cloudinary.com/dwhkjr77b/image/upload/v1749905096/menu_1__16_i0rrih.webp",
+    "https://res.cloudinary.com/dwhkjr77b/image/upload/v1749905096/menu_1__17_gsworm.webp",
+    "https://res.cloudinary.com/dwhkjr77b/image/upload/v1749905095/menu_1__18_tzn50v.webp"
+  ];
+  const gallery = document.getElementById('menu-gallery');
+  imageLinks.forEach(link => {
+    const img = document.createElement('img');
+    img.src = link;
+    img.alt = "صورة منيو";
+    gallery.appendChild(img);
+  });
+});
+</script>
 
 </body>
 </html>
