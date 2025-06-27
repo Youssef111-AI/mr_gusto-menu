@@ -3,19 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
   <title>Mr Gusto Menu</title>
   <meta name="description" content="منيو مطعم Mr Gusto Cafe - تصفح سريع للمنيو بدون تأخير" />
-      <!-- ✅ Open Graph -->
-  <meta property="og:title" content="Mr Gusto Café">
+  <meta name="keywords" content="Mr Gusto, منيو كافيه, مشروبات, أكلات, كافيه الحسينية, منيو سريع, منيو أونلاين" />
+  <meta name="author" content="Mr Gusto Café Team" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- ✅ Open Graph Meta Tags -->
+  <meta property="og:title" content="Mr Gusto Café - منيو">
+  <meta property="og:description" content="تصفح منيو كافيه Mr Gusto بسرعة وسهولة.">
   <meta property="og:image" content="https://res.cloudinary.com/dwhkjr77b/image/upload/v1750708177/MR_GUSTO-02-modified_ukvcl8.png">
-  <link rel="preconnect" href="https://res.cloudinary.com">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ar_AR">
+  <meta property="og:url" content="https://mr-gusto-menu.vercel.app/">
+
+  <!-- ✅ Performance Enhancements -->
+  <link rel="preconnect" href="https://res.cloudinary.com" crossorigin>
   <link rel="dns-prefetch" href="https://res.cloudinary.com">
+
+  <!-- ✅ Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- ✅ Main CSS -->
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <div class="gallery" id="menu-gallery"></div>
+  <div class="gallery" id="menu-gallery" aria-label="منيو الكافيه"></div>
+
   <footer>&copy; 2025 Mr Gusto Cafe</footer>
-  <script src="script.js"></script>
+
+  <!-- ✅ Scripts -->
+  <script src="script.js" defer></script>
 </body>
 </html>
