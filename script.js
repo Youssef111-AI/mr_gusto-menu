@@ -1,21 +1,21 @@
 const imageLinks = [
-  "https://res.cloudinary.com/dwhkjr77b/image/upload/f_auto,q_75,w_700/v1761082743/1_mbfks5.webp",
-  "https://res.cloudinary.com/dwhkjr77b/image/upload/f_auto,q_75,w_700/v1761082737/2_efq9gc.webp",
-  "https://res.cloudinary.com/dwhkjr77b/image/upload/f_auto,q_75,w_700/v1761082738/3_hit2nu.webp",
-  "https://res.cloudinary.com/dwhkjr77b/image/upload/f_auto,q_75,w_700/v1749905075/4_k9sje9.webp",
-  "https://res.cloudinary.com/dwhkjr77b/image/upload/f_auto,q_75,w_700/v1749905075/5_zw4ezx.webp",
-  "https://res.cloudinary.com/dwhkjr77b/image/upload/f_auto,q_75,w_700/v1749905079/6_librgy.webp",
-  "https://res.cloudinary.com/dwhkjr77b/image/upload/f_auto,q_75,w_700/v1749905086/7_vevv3q.webp",
-  "https://res.cloudinary.com/dwhkjr77b/image/upload/f_auto,q_75,w_700/v1749905086/8_penuss.webp",
-  "https://res.cloudinary.com/dwhkjr77b/image/upload/f_auto,q_75,w_700/v1749905092/9_bapbqi.webp",
-  "https://res.cloudinary.com/dwhkjr77b/image/upload/f_auto,q_75,w_700/v1749905078/10_wix7ik.webp",
-  "https://res.cloudinary.com/dwhkjr77b/image/upload/f_auto,q_75,w_700/v1749905079/11_qtbcuk.webp",
-  "https://res.cloudinary.com/dwhkjr77b/image/upload/f_auto,q_75,w_700/v1749905086/12_zmasb8.webp",
-  "https://res.cloudinary.com/dwhkjr77b/image/upload/f_auto,q_75,w_700/v1749905085/13_qhorwf.webp",
-  "https://res.cloudinary.com/dwhkjr77b/image/upload/f_auto,q_75,w_700/v1749905091/14_zlbeae.webp",
-  "https://res.cloudinary.com/dwhkjr77b/image/upload/f_auto,q_75,w_700/v1749905092/15_koyuds.webp",
-  "https://res.cloudinary.com/dwhkjr77b/image/upload/f_auto,q_75,w_700/v1749905096/16_vy4jjz.webp",
-  "https://res.cloudinary.com/dwhkjr77b/image/upload/f_auto,q_75,w_700/v1749905096/17_dzjoqz.webp"
+  "https://res.cloudinary.com/dwhkjr77b/image/upload/f_auto,q_75,w_700/v1780351329/1_x0szy8.webp",
+  "https://res.cloudinary.com/dwhkjr77b/image/upload/f_auto,q_75,w_700/v1780351328/2_nlgxm3.webp",
+  "https://res.cloudinary.com/dwhkjr77b/image/upload/f_auto,q_75,w_700/v1780351328/3_kgkrak.webp",
+  "https://res.cloudinary.com/dwhkjr77b/image/upload/f_auto,q_75,w_700/v1780351329/4_nggazq.webp",
+  "https://res.cloudinary.com/dwhkjr77b/image/upload/f_auto,q_75,w_700/v1780351330/5_nx78ge.webp",
+  "https://res.cloudinary.com/dwhkjr77b/image/upload/f_auto,q_75,w_700/v1780351329/6_sfslox.webp",
+  "https://res.cloudinary.com/dwhkjr77b/image/upload/f_auto,q_75,w_700/v1780351328/7_svg0zc.webp",
+  "https://res.cloudinary.com/dwhkjr77b/image/upload/f_auto,q_75,w_700/v1780351328/8_dcjdxy.webp",
+  "https://res.cloudinary.com/dwhkjr77b/image/upload/f_auto,q_75,w_700/v1780351328/9_jmlrh1.webp",
+  "https://res.cloudinary.com/dwhkjr77b/image/upload/f_auto,q_75,w_700/v1780351329/10_tuewcy.webp",
+  "https://res.cloudinary.com/dwhkjr77b/image/upload/f_auto,q_75,w_700/v1780351328/11_xaoefk.webp",
+  "https://res.cloudinary.com/dwhkjr77b/image/upload/f_auto,q_75,w_700/v1780351329/12_ozvqe0.webp",
+  "https://res.cloudinary.com/dwhkjr77b/image/upload/f_auto,q_75,w_700/v1780351328/13_nac1sf.webp",
+  "https://res.cloudinary.com/dwhkjr77b/image/upload/f_auto,q_75,w_700/v1780351329/14_yapjko.webp",
+  "https://res.cloudinary.com/dwhkjr77b/image/upload/f_auto,q_75,w_700/v1780351329/15_wmamye.webp",
+  "https://res.cloudinary.com/dwhkjr77b/image/upload/f_auto,q_75,w_700/v1780351329/16_l38hp8.webp",
+  "https://res.cloudinary.com/dwhkjr77b/image/upload/f_auto,q_75,w_700/v1780351328/17_swe0f6.webp"
 ];
 
 const gallery = document.getElementById('menu-gallery');
